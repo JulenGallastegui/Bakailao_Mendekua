@@ -15,7 +15,7 @@ int KolisioaJaso(int akuarioa, int zein, int(*kolisioa)[700])
 {
 	int i, j, defektuz = 0;
 
-	if (akuarioa == -1)
+	if (akuarioa == -1 || (akuarioa == 0 && (zein == 0 || zein == 2)))
 		defektuz = 1;
 
 	for (i = 0; i < 700; i++) //Arraya 0-ra hasieratu
@@ -42,6 +42,62 @@ int KolisioaJaso(int akuarioa, int zein, int(*kolisioa)[700])
 			return 1;
 #pragma endregion menua
 			break;
+		case 0:
+			switch (zein)
+			{
+				case 0:
+#pragma region 
+					for (i = 0; i < 700; i++) //Lurra liberatu
+					{
+						for (j = 317; j <= 628; j++)
+						{
+							kolisioa[i][j] = 0;
+						}
+					}
+					kolisioa[0][0] = 1; //0,0 beti 1 izan behar da
+					return 1;
+#pragma endregion etxea
+				case 1:
+#pragma region 
+					for (i = 0; i < 700; i++) //Goiko pareta
+					{
+						for (j = 0; j <= 310; j++)
+						{
+							kolisioa[i][j] = 1;
+						}
+					}
+					for (i = 349; i < 518; i++) //Mahaia
+					{
+						for (j = 311; j <= 420; j++)
+						{
+							kolisioa[i][j] = 1;
+						}
+					}
+					for (i = 535; i < 699; i++) //Ohea
+					{
+						for (j = 311; j <= 530; j++)
+						{
+							kolisioa[i][j] = 1;
+						}
+					}
+					kolisioa[0][0] = 1; //0,0 beti 1 izan behar da
+					return 1;
+#pragma endregion etxeBarrua
+				case 2:
+#pragma region 
+					for (i = 0; i < 700; i++) //Lurra libratu
+					{
+						for (j = 317; j <= 628; j++)
+						{
+							kolisioa[i][j] = 0;
+						}
+					}
+					kolisioa[0][0] = 0; //0,0 beti 1 izan behar da
+					return 1;
+#pragma endregion geltokiruntz
+
+			}
+		break;
 		case 1: //Akuario 1
 			switch (zein)
 			{
@@ -620,6 +676,96 @@ int GeziakJaso(int akuario, int nibela, int(*geziak)[700])
 		}
 		break;
 	case 0:
+		switch (nibela)
+		{
+			case -1:
+				//eskumako gezia   i==X  j==Y
+				for (i = 589; i < 700; i++)
+				{
+					for (j = 415; j <= 490; j++)
+					{
+						geziak[i][j] = 1;
+					}
+				}
+				return 1;
+			case 0:
+				//ezkerreko gezia   i==X  j==Y
+				for (i = 0; i < 106; i++)
+				{
+					for (j = 434; j <= 510; j++)
+					{
+						geziak[i][j] = 1;
+					}
+				}
+				//eskumako gezia   i==X  j==Y
+				for (i = 592; i < 700; i++)
+				{
+					for (j = 434; j <= 509; j++)
+					{
+						geziak[i][j] = 2;
+					}
+				}
+				//goiko gezia   i==X  j==Y
+				for (i = 311; i < 388; i++)
+				{
+					for (j = 257; j <= 366; j++)
+					{
+						geziak[i][j] = 3;
+					}
+				}
+				return 1;
+			case 1:
+				//beheko gezia   i==X  j==Y
+				for (i = 109; i < 185; i++)
+				{
+					for (j = 591; j <= 700; j++)
+					{
+						geziak[i][j] = 1;
+					}
+				}
+				break;
+			case 2:
+				//ezkerreko gezia   i==X  j==Y
+				for (i = 59; i < 167; i++)
+				{
+					for (j = 415; j <= 490; j++)
+					{
+						geziak[i][j] = 1;
+					}
+				}
+				//eskumako gezia   i==X  j==Y
+				for (i = 521; i < 630; i++)
+				{
+					for (j = 417; j <= 493; j++)
+					{
+						geziak[i][j] = 2;
+					}
+				}
+
+
+				break;
+			case 3:
+				//ezkerreko gezia   i==X  j==Y
+				for (i = 0; i < 116; i++)
+				{
+					for (j = 596; j <= 652; j++)
+					{
+						geziak[i][j] = 1;
+					}
+				}
+				//goiko gezia   i==X  j==Y
+				for (i = 394; i < 447; i++)
+				{
+					for (j = 541; j <= 650; j++)
+					{
+						geziak[i][j] = 2;
+					}
+				}
+
+				break;
+			default:
+				break;
+		}
 		break;
 	case 1:
 		switch (nibela)

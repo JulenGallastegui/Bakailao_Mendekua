@@ -38,13 +38,69 @@ int PantailaAldatu()
 	case -1:
 		if (geziak[playerPos.x + 117][playerPos.y + 234] == 1)
 		{
-			akuarioa = 1;
-			gela = -1;
+			akuarioa = 0;
+			gela = 1;
 		}
 		else if (geziak[playerPos.x + 117][playerPos.y + 234] == 2)
 			return -1;
 		break;
 	case 0:
+		switch (gela)
+		{
+		case -1:
+			if (geziak[playerPos.x + 117][playerPos.y + 234] == 1)
+			{
+				gela = 0;
+			}
+
+			break;
+		case 0:
+			if (geziak[playerPos.x + 117][playerPos.y + 234] == 1)
+			{
+				gela = -1;
+			}
+			if (geziak[playerPos.x + 117][playerPos.y + 234] == 2)
+			{
+				gela = 2;
+			}
+			if (geziak[playerPos.x + 117][playerPos.y + 234] == 3)
+			{
+				gela = 1;
+			}
+
+			break;
+		case 1:
+			if (geziak[playerPos.x + 117][playerPos.y + 234] == 1)
+			{
+				gela = 0;
+			}
+
+			break;
+		case 2:
+			if (geziak[playerPos.x + 117][playerPos.y + 234] == 1)
+			{
+				gela = 0;
+			}
+			if (geziak[playerPos.x + 117][playerPos.y + 234] == 2)
+			{
+				gela = 3;
+			}
+
+			break;
+		case 3:
+			if (geziak[playerPos.x + 117][playerPos.y + 234] == 1)
+			{
+				gela = 2;
+			}
+			if (geziak[playerPos.x + 117][playerPos.y + 234] == 2)
+			{
+				gela = 4;
+			}
+
+			break;
+		default:
+			break;
+		}
 
 		break;
 	case 1:
@@ -327,9 +383,20 @@ int GeziakHasieratu(char* mapaIzena)
 		GeziakJaso(2, 9, geziak);
 	else if (mapaIzena == "buruzagia2")
 		GeziakJaso(2, 10, geziak);
+	else if (mapaIzena == "Hondartza")
+		GeziakJaso(0, -1, geziak);
+	else if (mapaIzena == "Etxea")
+		GeziakJaso(0, 0, geziak);
+	else if (mapaIzena == "CuartoPrincipal")
+		GeziakJaso(0, 1, geziak);
+	else if (mapaIzena == "Geltokirabidea")
+		GeziakJaso(0, 2, geziak);
+	else if (mapaIzena == "anden3")
+		GeziakJaso(0, 3, geziak);
+
 	else
 		return 0;
-	
+
 	return 1;
 }
 void MaparenAukerak()
@@ -344,15 +411,15 @@ void MaparenAukerak()
 		if (ebentu == SAGU_BOTOIA_EZKERRA)
 		{
 			pos = saguarenPosizioa();
-			/*
+			
 			if (pos.x > 93 && pos.x < 214 && pos.y > 584 && pos.y < 700) //Etxea
 			{
 				//irudiaKendu(0);
 				//gureGauzak.idIrudiak[0] = irudiaKargatu(".\\img\\0.png", 0);
 				akuarioa = 0;
-				gela = 0;
+				gela = 3;
 				irten = 1;
-			}*/
+			}
 			if (pos.x > 99 && pos.x < 222 && pos.y > 368 && pos.y < 493) //akuario 1
 			{
 

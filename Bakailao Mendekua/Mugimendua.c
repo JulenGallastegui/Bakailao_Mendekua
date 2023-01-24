@@ -193,6 +193,12 @@ int KolisioakSortu(char* mapaIzena)
 {
 	if (mapaIzena == "menu")
 		return KolisioaJaso(-1, 0, kolisioa);
+	else if (mapaIzena == "etxea")                               //ESTE
+		return KolisioaJaso(0, 0, kolisioa);
+	else if (mapaIzena == "etxeBarrua")                          //ESTE
+		return KolisioaJaso(0, 1, kolisioa);
+	else if (mapaIzena == "geltokiruntz")                        //ESTE
+		return KolisioaJaso(0, 2, kolisioa);
 	else if (mapaIzena == "anden1")
 		return KolisioaJaso(1, 0, kolisioa);
 	else if (mapaIzena == "pasaleku1_1")
@@ -217,7 +223,7 @@ int KolisioakSortu(char* mapaIzena)
 
 int PausuSoinuakKargatu(char* mapaIzena)
 {
-	if (mapaIzena == "menu" || mapaIzena == "sarrera1" || mapaIzena == "pasaleku1_1" || mapaIzena == "pasaleku1_2" || mapaIzena == "pasaleku1_3" || mapaIzena == "pasaleku1_4" || mapaIzena == "pasaleku1_5" || mapaIzena == "buruzagia1")
+	if (mapaIzena == "menu" || mapaIzena == "etxeBarrua"|| mapaIzena == "sarrera1" || mapaIzena == "pasaleku1_1" || mapaIzena == "pasaleku1_2" || mapaIzena == "pasaleku1_3" || mapaIzena == "pasaleku1_4" || mapaIzena == "pasaleku1_5" || mapaIzena == "buruzagia1")
 	{
 		if (haserreNibela == 0)
 		{
@@ -255,7 +261,25 @@ int PausuSoinuakKargatu(char* mapaIzena)
 		}
 		return 1;
 	}
-
+	else if (mapaIzena == "etxea" || mapaIzena == "geltokiruntz")
+	{
+		if (haserreNibela == 0)
+		{
+			pausu1 = 12;
+			pausu2 = 13;
+		}
+		else if (haserreNibela == 1)
+		{
+			pausu1 = 14;
+			pausu2 = 15;
+		}
+		else if (haserreNibela == 2)
+		{
+			pausu1 = 16;
+			pausu2 = 17;
+		}
+		return 1;
+	}
 	return 0;
 }
 

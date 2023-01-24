@@ -18,7 +18,8 @@
 
 char* soundFiles[]= {".\\sound\\Normal\\Paso grava 1.wav", ".\\sound\\Normal\\Paso grava 2.wav", ".\\sound\\Normal\\Paso madera 1.wav", ".\\sound\\Normal\\Paso madera 2.wav", 
                      ".\\sound\\Haserre\\Paso grava 1.wav", ".\\sound\\Haserre\\Paso grava 2.wav", ".\\sound\\Haserre\\Paso madera 1.wav", ".\\sound\\Haserre\\Paso madera 2.wav",
-                     ".\\sound\\Oso haserre\\Paso grava 1.wav", ".\\sound\\Oso haserre\\Paso grava 2.wav", ".\\sound\\Oso haserre\\Paso madera 1.wav", ".\\sound\\Oso haserre\\Paso madera 2.wav" };
+                     ".\\sound\\Oso haserre\\Paso grava 1.wav", ".\\sound\\Oso haserre\\Paso grava 2.wav", ".\\sound\\Oso haserre\\Paso madera 1.wav", ".\\sound\\Oso haserre\\Paso madera 2.wav",
+                     ".\\sound\\Normal\\Paso hierba 1.wav", ".\\sound\\Normal\\Paso hierba 2.wav", ".\\sound\\Haserre\\Paso hierba 1.wav", ".\\sound\\Haserre\\Paso hierba 2.wav", ".\\sound\\Oso haserre\\Paso hierba 1.wav", ".\\sound\\Oso haserre\\Paso hierba 2.wav" };
 
 
 GURE_GAUZAK gureGauzak;
@@ -107,8 +108,8 @@ int main(int argc, char * str[])
                     irten = 1;
                     break;
                 case 2:
-                    akuarioa = 1;
-                    gela = 0;
+                    akuarioa = 0;
+                    gela = 1;
                     break;
                 case -2:
                     if (GalduPantaila() == -1)
@@ -165,12 +166,48 @@ int MapaHasieratu()
             mugimenduHasieratuReturn = MugimenduaHasieratu(435, 450, "menu");
             break;
         case 0:
+            switch (gela)
+            {
+                case -1:
+                    irudiaKargatu(".\\img\\Akuarioak\\0\\Hondartza.png", 0);
+                    GeziakHasieratu("Hondartza");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "menu");
+                    break;
+                case 0:
+                    irudiaKargatu(".\\img\\Akuarioak\\0\\Etxea.png", 0);
+                    GeziakHasieratu("Etxea");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "etxea");
+                    break;
+                case 1:
+                    irudiaKargatu(".\\img\\Akuarioak\\0\\CuartoPrincipal.png", 0);
+                    GeziakHasieratu("CuartoPrincipal");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "etxeBarrua");
+                    break;
+                case 2:
+                    irudiaKargatu(".\\img\\Akuarioak\\0\\Geltokirabidea.png", 0);
+                    GeziakHasieratu("Geltokirabidea");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "geltokiruntz");
+                    break;
+                case 3:
+                    irudiaKargatu(".\\img\\Anden\\Anden0.png", 0);
+                    GeziakHasieratu("anden3");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 620, "anden1");
+                    break;
+                case 4:
+                    irudiaKargatu(".\\img\\Mapa.png", 0);
+                    irudiaKendu(ARRAIN_GIZON_ID);
+                    MaparenAukerak();
+                    break;
+                default:
+                    break;
+            }
+            if (ezKargatuMusika == 0 && !kargatuMusika(".\\sound\\Musica fondo 1.wav")) printf("Ezin izan da musika kargatu. %s\n", SDL_GetError());
             break;
         case 1:
             switch (gela)
             {
                 case -1:
-                    irudiaKargatu(".\\img\\Anden.png", 0);
+                    irudiaKargatu(".\\img\\Anden\\Anden1.png", 0);
                     GeziakHasieratu("anden1");
                     mugimenduHasieratuReturn = MugimenduaHasieratu(350, 620, "anden1");
                     break;
@@ -269,7 +306,7 @@ int MapaHasieratu()
             switch (gela)
             {
             case -1:
-                irudiaKargatu(".\\img\\Anden.png", 0);
+                irudiaKargatu(".\\img\\Anden\\Anden2.png", 0);
                 GeziakHasieratu("anden2");
                 mugimenduHasieratuReturn = MugimenduaHasieratu(350, 620, "anden1");
                 break;
