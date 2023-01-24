@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Egunkaria.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Hasiera.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Mugimendua.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="NibelKolisioak.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simpleSdlWrapper\ebentoak.c">
+      <Filter>Source\SDL_Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simpleSdlWrapper\graphics.c">
+      <Filter>Source\SDL_Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simpleSdlWrapper\imagen.c">
+      <Filter>Source\SDL_Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simpleSdlWrapper\soinua.c">
+      <Filter>Source\SDL_Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simpleSdlWrapper\text.c">
+      <Filter>Source\SDL_Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Combate.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Egunkaria.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Mugimendua.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="NibelKolisioak.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="OurTypes.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simpleSdlWrapper\ebentoak.h">
+      <Filter>Header\SDL_Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simpleSdlWrapper\graphics.h">
+      <Filter>Header\SDL_Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simpleSdlWrapper\imagen.h">
+      <Filter>Header\SDL_Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simpleSdlWrapper\soinua.h">
+      <Filter>Header\SDL_Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simpleSdlWrapper\text.h">
+      <Filter>Header\SDL_Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Combate.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header">
+      <UniqueIdentifier>{421f28cb-a15c-4328-aeaa-d24e122e0eb4}</UniqueIdentifier>
+      <Extensions>$(fliename).h</Extensions>
+    </Filter>
+    <Filter Include="Header\SDL_Wrapper">
+      <UniqueIdentifier>{abe05f44-36cc-4928-b1c4-fe437a8e0528}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{f04588ff-4102-42d1-ac5e-b17982c50273}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\SDL_Wrapper">
+      <UniqueIdentifier>{c4ba6ba6-59d6-484c-8ea1-5aaa5f42d46f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

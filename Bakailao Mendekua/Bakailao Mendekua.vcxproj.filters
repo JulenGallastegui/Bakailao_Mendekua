@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Combate.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Egunkaria.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Hasiera.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Mugimendua.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="NibelKolisioak.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="PantailaAldatu.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simpleSdlWrapper\ebentoak.c">
+      <Filter>Source\SDL_Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simpleSdlWrapper\graphics.c">
+      <Filter>Source\SDL_Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simpleSdlWrapper\imagen.c">
+      <Filter>Source\SDL_Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simpleSdlWrapper\soinua.c">
+      <Filter>Source\SDL_Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\simpleSdlWrapper\text.c">
+      <Filter>Source\SDL_Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Mugikorra.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="HasierakoMenua.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Finalak.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GalduPantaila.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerUp.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Combate.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Egunkaria.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Mugimendua.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="NibelKolisioak.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="OurTypes.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="pantailaAldatu.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simpleSdlWrapper\ebentoak.h">
+      <Filter>Header\SDL_Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simpleSdlWrapper\graphics.h">
+      <Filter>Header\SDL_Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simpleSdlWrapper\imagen.h">
+      <Filter>Header\SDL_Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simpleSdlWrapper\soinua.h">
+      <Filter>Header\SDL_Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\simpleSdlWrapper\text.h">
+      <Filter>Header\SDL_Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Mugikorra.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="HasierakoMenua.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Finalak.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GalduPantaila.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="PowerUp.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header">
+      <UniqueIdentifier>{c2e15fd7-6315-4245-982e-27b16831b717}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{a52443bf-4e27-42a2-848f-befb68b15a63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\SDL_Wrapper">
+      <UniqueIdentifier>{a3ef4fc7-5dcb-4770-ac24-424e53ab9a12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\SDL_Wrapper">
+      <UniqueIdentifier>{e0daac07-fbd8-45d7-907a-b27d1acc1f77}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
