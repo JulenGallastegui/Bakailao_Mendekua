@@ -213,7 +213,7 @@ void EgunkarikoTestuaIdatzi()
 		textuaIdatzi(70, 200, "ditut. Bertako buruzagia Elon Crab");
 		textuaIdatzi(70, 220, "deitzen zen. Crab-ek nahiko erraz");
 		textuaIdatzi(70, 240, "eman du amore. Arrainontzian botila bat");
-		textuaIdatzi(70, 260, "aurkidu dut, gehiago sentzeko balio");
+		textuaIdatzi(70, 260, "aurkidu dut, gehiago sendatzeko balio");
 		textuaIdatzi(70, 280, "duena. Gainera kutxa batean bizitza ");
 		textuaIdatzi(70, 300, "puntu gehiago lortu egin ditut ur espezial");
 		textuaIdatzi(70, 320, "bat zegoelako. Horain gai sentitzen naiz");

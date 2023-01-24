@@ -1,3 +1,22 @@
-﻿  Hasiera.c
+﻿  Egunkaria.c
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(28,12): warning C4101: 'koloreZaharra': variable local sin referencia
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(92,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(97,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(104,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(111,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(121,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(128,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(137,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(146,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(161,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(172,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(190,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(207,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(225,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(245,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(263,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(266,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Hasiera.c
 C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Hasiera.c(52,5): warning C4013: 'MapaHasieratu' sin definir; se supone que extern devuelve como resultado int
+  Generando código...
   Bakailao Mendekua.vcxproj -> C:\Users\julen\Desktop\Bakailao mendekua\Debug\Bakailao Mendekua.exe
