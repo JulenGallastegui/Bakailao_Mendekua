@@ -48,6 +48,19 @@ int GalduPantaila()
                     else
                         gela -= 2;
                 }
+                else if (akuarioa == 2)
+                {
+                    if (gela == 4)
+                        gela--;
+                    gela--;
+                }
+                else if (akuarioa == 3)
+                {
+                    if (gela == 13)
+                        gela = 2;
+                    else
+                        gela--;
+                }
       
                 irten = 1;
             }

@@ -5,5 +5,6 @@
 
 int AldatuGela(int ebentu);
 int GeziakHasieratu(char* mapaIzena);
-void MaparenAukerak();
+int MaparenAukerak(void);
+
 #endif

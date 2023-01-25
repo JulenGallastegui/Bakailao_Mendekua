@@ -1,0 +1,469 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Desbordamiento aritmético: el operador \"-\" se usa en un valor de 4 bytes y, a continuación, el resultado se convierte a un valor de 8 bytes. Convierta el valor al tipo más amplio antes de llamar al operador \"-\" para evitar el desbordamiento (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/julen/Desktop/Bakailao mendekua/simpleSdlWrapper/graphics.c"
+                },
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 34,
+                  "endLine": 79,
+                  "endColumn": 53
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "zirkuluaMarraztu",
+                  "decoratedName": "zirkuluaMarraztu",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Desbordamiento aritmético: el operador \"*\" se usa en un valor de 4 bytes y, a continuación, el resultado se convierte a un valor de 8 bytes. Convierta el valor al tipo más amplio antes de llamar al operador \"*\" para evitar el desbordamiento (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/julen/Desktop/Bakailao mendekua/simpleSdlWrapper/graphics.c"
+                },
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 34,
+                  "endLine": 79,
+                  "endColumn": 36
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "zirkuluaMarraztu",
+                  "decoratedName": "zirkuluaMarraztu",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.33.31630.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/julen/Desktop/Bakailao mendekua/simpleSdlWrapper/graphics.c"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "af2ab443fcfff43d4806ada9d170739d7a7c7f0f9f6ddb597a4e8becc53d0c53"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2ttf/include/sdl_ttf.h"
+          },
+          "hashes": {
+            "sha-256": "a12a232df1a0953704e73b9c7e81b1a4edd7533e8a2855de4d9303e9bae3842c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl.h"
+          },
+          "hashes": {
+            "sha-256": "a9421b29a0c593d38cf0d472e552034d31f05faf921db6058e112eba38a2aa3c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_main.h"
+          },
+          "hashes": {
+            "sha-256": "a1c8ceb04615b21b18a6271804a42e11dc1ade2e59484510eef0b0723e5afc6f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_stdinc.h"
+          },
+          "hashes": {
+            "sha-256": "ad8dfa3db089612a4442360fc90890fd46b16c391087fa04d20ded1ed427c7da"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_config.h"
+          },
+          "hashes": {
+            "sha-256": "de6173d8446d7eec3f91ba617f55e37db31122a1961b05213ad7970b5d5579c4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_platform.h"
+          },
+          "hashes": {
+            "sha-256": "dcb29f339d694a3c8262808145f518a95d16b41572d323be8b3b804450d7e44e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/begin_code.h"
+          },
+          "hashes": {
+            "sha-256": "73d3745e00e1f27670b507a8936abaceac0bdf946d636d48ddf69594ddc519f4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/close_code.h"
+          },
+          "hashes": {
+            "sha-256": "ec6a4f12add205fc3c37d4cf6aa6216a8ee20c934b8215d720885c2b1c8b382a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_assert.h"
+          },
+          "hashes": {
+            "sha-256": "fb0e989b5ab24856b507a4602a9a7b81772d532331bf05aa8bcecf9203aff8e6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_atomic.h"
+          },
+          "hashes": {
+            "sha-256": "d6f20d600bf36d69565f386d7763e5077a0a274b1e6e98a3cc5a0837c8c3b222"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_audio.h"
+          },
+          "hashes": {
+            "sha-256": "0fa16988238bc2ce9dcc238cafdfe437d8297d24f221b2ae67db870ecaae57c6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_error.h"
+          },
+          "hashes": {
+            "sha-256": "9b544cee1269879ff182a1b70eef4da423213802962129addac787e1cec2c6df"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_endian.h"
+          },
+          "hashes": {
+            "sha-256": "f48abf0eacf6ec91d51130e3fd88c85d8f7985c6f7135c2e3efa02cf120402e5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_mutex.h"
+          },
+          "hashes": {
+            "sha-256": "340331a214fcbcc6fbc7b5e52968e599abeb66202a7f76742e78221d0070f460"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_thread.h"
+          },
+          "hashes": {
+            "sha-256": "baa8736199df0a31d737263214994a18452f1d64d39be39648a6c33a4db85590"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_rwops.h"
+          },
+          "hashes": {
+            "sha-256": "2abeedace6187d83f4a30063db70eba849b1024adf485ff1b272906a93963e1b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_clipboard.h"
+          },
+          "hashes": {
+            "sha-256": "b1908534d98bcb534e146c822373d1f4de5f38ee29ad764f1bb72a8f0ecca5a8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_cpuinfo.h"
+          },
+          "hashes": {
+            "sha-256": "488142ff936ce07da56e9e5f192b0f1f5b2e15b3be9217eb0e55d66992029fe6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_events.h"
+          },
+          "hashes": {
+            "sha-256": "bb35aca0b89bbabf10320a9eccf0aca4f904404f89fe0474aeb01c3ddb796bee"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_video.h"
+          },
+          "hashes": {
+            "sha-256": "2ea88afdc829b558e15c9b41f33917b0c8be9008ecafacebfa680620da2eef05"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_pixels.h"
+          },
+          "hashes": {
+            "sha-256": "71f2b5c19c25c04b3c62c007a48928c1d2b59b785d1dccc15f967bf2662ee6e7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_rect.h"
+          },
+          "hashes": {
+            "sha-256": "86272596b75a8fc01fac3dd13436261cd591cdca3430ce4f4d8d0e29b29b83f2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_surface.h"
+          },
+          "hashes": {
+            "sha-256": "8d83535ac2f6fc8604503fe8abaeb106cce5b3fdeba2dc0b2496e2a48af7dbc6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_blendmode.h"
+          },
+          "hashes": {
+            "sha-256": "9f908a825139cddfdaa5e809adc2c9d16590125588ed80cfec152225ead94c25"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_keyboard.h"
+          },
+          "hashes": {
+            "sha-256": "47009b5a23b56c9c05978542e6ed4fa0a2d290ffc2fc3d5ce30ff92abc207390"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_keycode.h"
+          },
+          "hashes": {
+            "sha-256": "cffa45df327e28d7e5caf26408ce456e117e9daec2c7655a6458e85c32177aaa"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_scancode.h"
+          },
+          "hashes": {
+            "sha-256": "b438f298907694cbdc4aa74f1108728d1bfe6b11f528cbad38e3fe8db53cedac"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_mouse.h"
+          },
+          "hashes": {
+            "sha-256": "137b3b60440dd79a88e03664b9a65bc55dd06ba07f7316c535adcfaceb551c0b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_joystick.h"
+          },
+          "hashes": {
+            "sha-256": "e31e0b4ee08b16206606ea2543a42e2e4a196396b7cb654e53457c21902623de"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_gamecontroller.h"
+          },
+          "hashes": {
+            "sha-256": "1e3eb20eafd794a6e9d6089ad757f46a5eec7961be824e73881c8714b82e9fd9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_quit.h"
+          },
+          "hashes": {
+            "sha-256": "b5ba73702fcfdfb188109196ab91fa372191ba1c9fb3dbc66ba0e5e5022374e5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_gesture.h"
+          },
+          "hashes": {
+            "sha-256": "e77e3b198767ee258d21122e69e6c2de78fc090e4fe28a3a28fa80b6b2c79cf8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_touch.h"
+          },
+          "hashes": {
+            "sha-256": "8d6553067fe38ee1a0bc53c6a269c12a3d0f5e4765fe59a99faaa60980888aa6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_filesystem.h"
+          },
+          "hashes": {
+            "sha-256": "4ac6f1066be4a8339cb16b97e8b88970440ff62cc871a7af71be987a9ca8865c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_haptic.h"
+          },
+          "hashes": {
+            "sha-256": "374bbc82868dfb375b8c0c54695de0d74afced99665a49d7735e0c24e52a7efd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_hints.h"
+          },
+          "hashes": {
+            "sha-256": "56b8d8ac5d149fa40908e66c0b0f032e9243668cbb7b3455ce0ab59290011c3c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_loadso.h"
+          },
+          "hashes": {
+            "sha-256": "91d93fd8db2b743ffd1e5742a07f5a9a4b8fb5d647fa0011590e44dacd274669"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_log.h"
+          },
+          "hashes": {
+            "sha-256": "aede39e97a6ac2e02f8655f0f111827d514d2377c42e57493995e196dd07ceb4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_messagebox.h"
+          },
+          "hashes": {
+            "sha-256": "307d1d8118858621debb2ee39c22003f08b6ec30bd8eef474e0e36d6d333c0b0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_power.h"
+          },
+          "hashes": {
+            "sha-256": "2f8cd67e54b33ef82e3391fed479052bf4b8cf0fa5cd8f453138d75e2b5f197f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_render.h"
+          },
+          "hashes": {
+            "sha-256": "9836c7feccedfc0a7138b3e95ae7c97fc9300520d6848a80b137544c5faf6544"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_shape.h"
+          },
+          "hashes": {
+            "sha-256": "303f6dc237d9b7c18b91bc39399b732441ab7f17ecbd17a0ca31f4ac4ca3b309"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_system.h"
+          },
+          "hashes": {
+            "sha-256": "30dcc8c87c2a977952cd26eee236b26f7dbf525370e27e8e877d5968f406e9b2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_timer.h"
+          },
+          "hashes": {
+            "sha-256": "90a9dbd6e74c35a6ff8cdc726b8644058db390817a7a0c8ce428851997cd8a82"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/sdl2/include/sdl_version.h"
+          },
+          "hashes": {
+            "sha-256": "e9708ed4684d172594d5a4b6dfc6373736e80200d008650efad44a682bed2247"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/simplesdlwrapper/imagen.h"
+          },
+          "hashes": {
+            "sha-256": "3b0d84be5bfb7c816b5b620d0ecbd0d69999424146f385c6f1b76fb707cb30e6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/julen/desktop/bakailao mendekua/simplesdlwrapper/graphics.h"
+          },
+          "hashes": {
+            "sha-256": "f781f364f427e901db10c4418bb8d7dc43fee27002a31373599bf4136f3f63bc"
+          }
+        }
+      ]
+    }
+  ]
+}

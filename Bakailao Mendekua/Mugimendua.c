@@ -76,7 +76,7 @@ int MugituPertsonaia(int ebentu, int zenbat)
 		switch (mugitu)
 		{
 			case 0:
-				if (haserreNibela == 0)
+				if (haserreNibela == 0 || haserreNibela == 3)
 					irudiaKargatu(".\\img\\Pertsonaiak\\ArrainGizon\\Normal\\Arrain Gizon behera.png", ARRAIN_GIZON_ID);
 				else if (haserreNibela == 1)
 					irudiaKargatu(".\\img\\Pertsonaiak\\ArrainGizon\\Haserre\\Arrain Gizon behera.png", ARRAIN_GIZON_ID);
@@ -84,7 +84,7 @@ int MugituPertsonaia(int ebentu, int zenbat)
 					irudiaKargatu(".\\img\\Pertsonaiak\\ArrainGizon\\Oso haserre\\Arrain Gizon behera.png", ARRAIN_GIZON_ID);
 				break;
 			case 1:
-				if (haserreNibela == 0)
+				if (haserreNibela == 0 || haserreNibela == 3)
 					irudiaKargatu(".\\img\\Pertsonaiak\\ArrainGizon\\Normal\\Arrain Gizon ezkerrera.png", ARRAIN_GIZON_ID);
 				else if (haserreNibela == 1)
 					irudiaKargatu(".\\img\\Pertsonaiak\\ArrainGizon\\Haserre\\Arrain Gizon ezkerrera.png", ARRAIN_GIZON_ID);
@@ -92,7 +92,7 @@ int MugituPertsonaia(int ebentu, int zenbat)
 					irudiaKargatu(".\\img\\Pertsonaiak\\ArrainGizon\\Oso haserre\\Arrain Gizon ezkerrera.png", ARRAIN_GIZON_ID);
 				break;
 			case 2:
-				if (haserreNibela == 0)
+				if (haserreNibela == 0 || haserreNibela == 3)
 					irudiaKargatu(".\\img\\Pertsonaiak\\ArrainGizon\\Normal\\Arrain Gizon eskumara.png", ARRAIN_GIZON_ID);
 				else if (haserreNibela == 1)
 					irudiaKargatu(".\\img\\Pertsonaiak\\ArrainGizon\\Haserre\\Arrain Gizon eskumara.png", ARRAIN_GIZON_ID);
@@ -297,7 +297,7 @@ int MugimenduaHasieratu(int x, int y, char* mapaIzena)
 	playerPos.x = -117 + x;
 	playerPos.y = -234 + y;
 
-	if (haserreNibela == 0)
+	if (haserreNibela == 0 || haserreNibela == 3)
 		irudiaKargatu(".\\img\\Pertsonaiak\\ArrainGizon\\Normal\\Arrain Gizon behera.png", ARRAIN_GIZON_ID);
 	else if (haserreNibela == 1)
 		irudiaKargatu(".\\img\\Pertsonaiak\\ArrainGizon\\Haserre\\Arrain Gizon behera.png", ARRAIN_GIZON_ID);

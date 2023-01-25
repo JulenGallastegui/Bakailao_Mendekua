@@ -68,7 +68,7 @@ void puntuaMarraztu(int x, int y)
 	SDL_SetRenderDrawColor(gRenderer, colorR, colorG, colorB, SDL_ALPHA_OPAQUE);
 	SDL_RenderDrawPoint(gRenderer, x, y);
 }
-
+/*
 void zirkuluaMarraztu(int x, int y, int r)
 {
 	int i, h;
@@ -80,7 +80,7 @@ void zirkuluaMarraztu(int x, int y, int r)
 		SDL_RenderDrawLine(gRenderer, i, y + h, i, y - h);
 	}
 }
-
+*/
 
 
 int irudiaMarraztu(SDL_Texture* texture, SDL_Rect *pDest)

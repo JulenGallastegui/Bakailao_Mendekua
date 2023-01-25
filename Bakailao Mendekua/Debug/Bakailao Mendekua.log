@@ -1,22 +1,33 @@
-﻿  Egunkaria.c
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(28,12): warning C4101: 'koloreZaharra': variable local sin referencia
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(92,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(97,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(104,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(111,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(121,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(128,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(137,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(146,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(161,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(172,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(190,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(207,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(225,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(245,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(263,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(266,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  ebentoak.c
+  graphics.c
+  imagen.c
+C:\Users\julen\Desktop\Bakailao mendekua\simpleSdlWrapper\imagen.c(27,9): warning C4013: 'IMG_LoadTexture' sin definir; se supone que extern devuelve como resultado int
+C:\Users\julen\Desktop\Bakailao mendekua\simpleSdlWrapper\imagen.c(27,45): warning C4047: '=': 'SDL_Texture *' es distinto en los niveles de direccionamiento indirecto de 'int'
+  soinua.c
+C:\Users\julen\Desktop\Bakailao mendekua\simpleSdlWrapper\soinua.c(169,31): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\julen\Desktop\Bakailao mendekua\simpleSdlWrapper\soinua.c(176,31): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\julen\Desktop\Bakailao mendekua\simpleSdlWrapper\soinua.c(183,31): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\julen\Desktop\Bakailao mendekua\simpleSdlWrapper\soinua.c(190,31): warning C4018: '<': no coinciden signed/unsigned
+  text.c
+C:\Users\julen\Desktop\Bakailao mendekua\simpleSdlWrapper\text.c(80,25): warning C4018: '>': no coinciden signed/unsigned
+  Combate.c
+  Egunkaria.c
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Egunkaria.c(29,12): warning C4101: 'koloreZaharra': variable local sin referencia
+  Finalak.c
+  GalduPantaila.c
   Hasiera.c
-C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Hasiera.c(52,5): warning C4013: 'MapaHasieratu' sin definir; se supone que extern devuelve como resultado int
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Hasiera.c(62,5): warning C4013: 'MapaHasieratu' sin definir; se supone que extern devuelve como resultado int
+  HasierakoMenua.c
+  Mugimendua.c
+  NibelKolisioak.c
+  Mugikorra.c
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\Mugikorra.c(226,55): warning C4244: 'función': conversión de 'float' a 'int'; posible pérdida de datos
+  PantailaAldatu.c
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\PantailaAldatu.c(24,3): warning C4013: 'PantailaAldatu' sin definir; se supone que extern devuelve como resultado int
+  PowerUp.c
   Generando código...
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\PantailaAldatu.c(29): warning C4716: 'AldatuGela': debe devolver un valor
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\PantailaAldatu.c(482): warning C4715: 'PantailaAldatu': no todas las rutas de acceso de control devuelven un valor
+C:\Users\julen\Desktop\Bakailao mendekua\Bakailao Mendekua\NibelKolisioak.c(644): warning C4715: 'KolisioaJaso': no todas las rutas de acceso de control devuelven un valor
+     Creando biblioteca C:\Users\julen\Desktop\Bakailao mendekua\Debug\Bakailao Mendekua.lib y objeto C:\Users\julen\Desktop\Bakailao mendekua\Debug\Bakailao Mendekua.exp
   Bakailao Mendekua.vcxproj -> C:\Users\julen\Desktop\Bakailao mendekua\Debug\Bakailao Mendekua.exe

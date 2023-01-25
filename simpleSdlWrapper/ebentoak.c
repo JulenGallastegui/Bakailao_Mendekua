@@ -175,6 +175,9 @@ int ebentuaJasoGertatuBada(void){
 					{
 						case SDL_BUTTON_RIGHT:
 							ret = SAGU_BOTOIA_ESKUMA;
+						case SDL_BUTTON_LEFT:
+							ret = SAGU_BOTOIA_EZKERRA;
+							break;
 							break;
 						default:
 							break;

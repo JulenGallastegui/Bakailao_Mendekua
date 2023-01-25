@@ -10,7 +10,7 @@ void sgItxi();//Sin opciones
 void arkatzKoloreaEzarri(int red, int green, int blue);
 void puntuaMarraztu(int x, int y);
 void zuzenaMarraztu(int x1, int y1, int x2, int y2);
-void zirkuluaMarraztu(int x, int y, int r);
+//void zirkuluaMarraztu(int x, int y, int r);
 void pantailaGarbitu();
 void pantailaBerriztu();
 

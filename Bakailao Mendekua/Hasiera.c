@@ -37,6 +37,16 @@ int borroka1_1 = 0;
 int borroka1_2 = 0;
 int buruzagi1 = 0;
 
+int borroka2_1 = 0;
+int borroka2_2 = 0;
+int borroka2_3 = 0;
+int buruzagi2 = 0;
+
+int borroka3_1 = 0;
+int borroka3_2 = 0;
+int borroka3_3 = 0;
+int buruzagi3 = 0;
+
 extern SDL_Window* window;
 
 int main(int argc, char * str[]) 
@@ -158,12 +168,14 @@ int MapaHasieratu()
     int mugimenduHasieratuReturn = 1;
     int ezKargatuMusika = 0;
     mugimenduaItxita = 1;
+    irudiaKendu(5);
     switch (akuarioa)
     {
         case -1:
             irudiaKargatu(".\\img\\Menu.png", 0);
             GeziakHasieratu("menu");
             mugimenduHasieratuReturn = MugimenduaHasieratu(435, 450, "menu");
+            if (ezKargatuMusika == 0 && !kargatuMusika(".\\sound\\Menu.wav")) printf("Ezin izan da musika kargatu. %s\n", SDL_GetError());
             break;
         case 0:
             switch (gela)
@@ -196,7 +208,8 @@ int MapaHasieratu()
                 case 4:
                     irudiaKargatu(".\\img\\Mapa.png", 0);
                     irudiaKendu(ARRAIN_GIZON_ID);
-                    MaparenAukerak();
+                    if (MaparenAukerak() == -1)
+                        return -1;;
                     break;
                 default:
                     break;
@@ -294,7 +307,8 @@ int MapaHasieratu()
                     break;
                 case 8:
                     irudiaKendu(ARRAIN_GIZON_ID);
-                    MaparenAukerak();
+                    if (MaparenAukerak() == -1)
+                        return -1;;
                     break;
                 default:
                     printf("Gela gaizki dago");
@@ -305,79 +319,271 @@ int MapaHasieratu()
         case 2:
             switch (gela)
             {
-            case -1:
-                irudiaKargatu(".\\img\\Anden\\Anden2.png", 0);
-                GeziakHasieratu("anden2");
-                mugimenduHasieratuReturn = MugimenduaHasieratu(350, 620, "anden1");
-                break;
-            case 0:
-                irudiaKargatu(".\\img\\Akuarioak\\1\\Akuarioaren sarrera.png", 0);
-                GeziakHasieratu("akuarioarenSarrera2");
-                mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "akuarioarenSarrera1");
-                break;
-            case 1:
-                irudiaKargatu(".\\img\\Akuarioak\\2\\sarrera.png", 0);
-                GeziakHasieratu("sarrera2");
-                mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "sarrera1");
-                break;
-
-            case 2:
-                irudiaKargatu(".\\img\\Akuarioak\\2\\Pasalekua1.png", 0);
-                GeziakHasieratu("pasaleku2_1");
-                mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_1");
-                break;
-            case 3:
-                irudiaKargatu(".\\img\\Akuarioak\\2\\Pasalekua2.png", 0);
-                GeziakHasieratu("pasaleku2_2");
-                mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_4");
-
-                break;
-            case 4:
-                irudiaKargatu(".\\img\\Akuarioak\\2\\Pasalekua4.png", 0);
-                GeziakHasieratu("pasaleku2_4");
-                //borrokaHasi() borroka badago
-                mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_4");
-                break;
-            case 5:
-                irudiaKargatu(".\\img\\Akuarioak\\2\\Pasalekua5.png", 0);
-               GeziakHasieratu("pasaleku2_5");
-                //borrokaHasi() borroka badago
-                mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_3");
-                break;
-            case 6:
-                irudiaKargatu(".\\img\\Akuarioak\\2\\Pasalekua3.png", 0);
-                GeziakHasieratu("pasaleku2_6");
-                //borrokaHasi() borroka badago
-                mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_4");
-                break;
-            case 7:
-                irudiaKargatu(".\\img\\Akuarioak\\2\\Pasalekua6.png", 0);
-                GeziakHasieratu("pasaleku2_7");
-                //if(borrokaHasi() ==-1) return -1 borroka badago
-                mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_3");
-                break;
-            case 8:
-                irudiaKendu(ARRAIN_GIZON_ID);
-                MaparenAukerak();
-                break;
-            case 9:
-                irudiaKargatu(".\\img\\Akuarioak\\2\\Pasalekua7.png", 0);
-                GeziakHasieratu("pasaleku2_9");
-                //if(borrokaHasi() ==-1) return -1 borroka badago
-                mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_3");
-                break;
-            case 10:
-                irudiaKargatu(".\\img\\Akuarioak\\2\\Buruzagia.png", 0);
-                GeziakHasieratu("buruzagia2");
-                //if(borrokaHasi() ==-1) return -1 borroka badago
-                mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "buruzagia1");
-                break;
-            default:
-                printf("Gela gaizki dago");
-                break;
+                case -1:
+                    irudiaKargatu(".\\img\\Anden\\Anden2.png", 0);
+                    GeziakHasieratu("anden2");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 620, "anden1");
+                    break;
+                case 0:
+                    irudiaKargatu(".\\img\\Akuarioak\\2\\Akuarioaren sarrera2.png", 0);
+                    GeziakHasieratu("akuarioarenSarrera2");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "akuarioarenSarrera1");
+                    break;
+                case 1:
+                    irudiaKargatu(".\\img\\Akuarioak\\2\\sarrera.png", 0);
+                    GeziakHasieratu("sarrera2");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "sarrera1");
+                    break;
+                case 2:
+                    irudiaKargatu(".\\img\\Akuarioak\\2\\Pasalekua1.png", 0);
+                    GeziakHasieratu("pasaleku2_1");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_1");
+                    break;
+                case 3:
+                    irudiaKargatu(".\\img\\Akuarioak\\2\\Pasalekua2.png", 0);
+                    PowerUpHasieratu();
+                    if (borroka2_1 == 0)
+                    {
+                        switch (borrokaHasi(0))
+                        {
+                        case 1:
+                            borroka2_1 = 1;
+                            break;
+                        case -1:
+                            return -1;
+                        case -2:
+                            return -2;
+                        }
+                    }
+                    GeziakHasieratu("pasaleku2_2");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_4");
+                    break;
+                case 4:
+                    irudiaKargatu(".\\img\\Akuarioak\\2\\Pasalekua4.png", 0);
+                    PowerUpHasieratu();
+                    if (borroka2_3 == 0)
+                    {
+                        switch (borrokaHasi(0))
+                        {
+                        case 1:
+                            borroka2_3 = 1;
+                            break;
+                        case -1:
+                            return -1;
+                        case -2:
+                            return -2;
+                        }
+                    }
+                    GeziakHasieratu("pasaleku2_4");
+                    //borrokaHasi() borroka badago
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_5");
+                    break;
+                case 5:
+                    irudiaKargatu(".\\img\\Akuarioak\\2\\Pasalekua5.png", 0);
+                    GeziakHasieratu("pasaleku2_5");
+                    //borrokaHasi() borroka badago
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_3");
+                    break;
+                case 6:
+                    irudiaKargatu(".\\img\\Akuarioak\\2\\Pasalekua3.png", 0);
+                    PowerUpHasieratu();
+                    if (borroka2_2 == 0)
+                    {
+                        switch (borrokaHasi(0))
+                        {
+                        case 1:
+                            borroka2_2 = 1;
+                            break;
+                        case -1:
+                            return -1;
+                        case -2:
+                            return -2;
+                        }
+                    }
+                    GeziakHasieratu("pasaleku2_3");
+                    //borrokaHasi() borroka badago
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_5");
+                    break;
+                case 7:
+                    irudiaKargatu(".\\img\\Akuarioak\\2\\Pasalekua6.png", 0);
+                    GeziakHasieratu("pasaleku2_6");
+                    //if(borrokaHasi() ==-1) return -1 borroka badago
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_3");
+                    break;
+                case 8:
+                    irudiaKargatu(".\\img\\Mapa.png", 0);
+                    MaparenAukerak();
+                    break;
+                case 9:
+                    irudiaKargatu(".\\img\\Akuarioak\\2\\Pasalekua7.png", 0);
+                    GeziakHasieratu("pasaleku2_7");
+                    //if(borrokaHasi() ==-1) return -1 borroka badago
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_3");
+                    break;
+                case 10:
+                    irudiaKargatu(".\\img\\Akuarioak\\2\\Buruzagia2.png", 0);
+                    if (buruzagi2 == 0)
+                    {
+                        switch (borrokaHasi(1))
+                        {
+                        case 1:
+                            buruzagi2 = 1;
+                            haserreNibela = 2;
+                            return BuruzagiAnimazioa(2);
+                            break;
+                        case -1:
+                            return -1;
+                        case -2:
+                            return -2;
+                        }
+                    }
+                    break;
+                default:
+                    printf("Gela gaizki dago");
+                    break;
             }
+            if (ezKargatuMusika == 0 && !kargatuMusika(".\\sound\\Musica fondo 1.wav")) printf("Ezin izan da musika kargatu. %s\n", SDL_GetError());
             break;
         case 3:
+            switch (gela)
+            {
+                case -1:
+                    irudiaKargatu(".\\img\\Anden\\Anden3.png", 0);
+                    GeziakHasieratu("anden3");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 620, "anden1");
+                    break;
+                case 0:
+                    irudiaKargatu(".\\img\\Akuarioak\\3\\Akuarioaren sarrera3.png", 0);
+                    GeziakHasieratu("Akuarioaren sarrera3");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "akuarioarenSarrera1");
+                    break;
+                case 1:
+                    irudiaKargatu(".\\img\\Akuarioak\\3\\sarrera.png", 0);
+                    GeziakHasieratu("sarrera3");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "sarrera1");
+                    break;
+                case 2:
+                    irudiaKargatu(".\\img\\Akuarioak\\3\\Pasalekua1.png", 0);
+                    GeziakHasieratu("pasaleku3_1");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_3");
+                    break;
+                case 3:
+                    irudiaKargatu(".\\img\\Akuarioak\\3\\Pasalekua3.png", 0);
+                    GeziakHasieratu("pasaleku3_3");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_1");
+                    break;
+                case 4:
+                    irudiaKargatu(".\\img\\Akuarioak\\3\\Pasalekua4.png", 0);
+                    GeziakHasieratu("pasaleku3_4");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_3");
+                    break;
+                case 5:
+                    irudiaKargatu(".\\img\\Akuarioak\\3\\Pasalekua5.png", 0);
+                    if (borroka3_2 == 0)
+                    {
+                        switch (borrokaHasi(0))
+                        {
+                        case 1:
+                            borroka3_2 = 1;
+                            break;
+                        case -1:
+                            return -1;
+                        case -2:
+                            return -2;
+                        }
+                    }
+                    GeziakHasieratu("pasaleku3_5");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_3");
+                    break;
+                case 6:
+                    irudiaKargatu(".\\img\\Akuarioak\\3\\Pasalekua6.png", 0);
+                    GeziakHasieratu("pasaleku3_6");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_3");
+                    break;
+                case 7:
+                    irudiaKargatu(".\\img\\Akuarioak\\3\\Pasalekua7.png", 0);
+                    GeziakHasieratu("pasaleku3_7");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_3");
+                    break;
+                case 8:
+                    irudiaKargatu(".\\img\\Akuarioak\\3\\Pasalekua8.png", 0);
+                    PowerUpHasieratu();
+                    GeziakHasieratu("pasaleku3_8");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_5");
+                    break;
+                case 9:
+                    irudiaKargatu(".\\img\\Akuarioak\\3\\Pasalekua9.png", 0);
+                    GeziakHasieratu("pasaleku3_9");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_1");
+                    break;
+                case 10:
+                    irudiaKargatu(".\\img\\Akuarioak\\3\\Pasalekua10.png", 0);
+                    PowerUpHasieratu();
+                    if (borroka3_3 == 0)
+                    {
+                        switch (borrokaHasi(0))
+                        {
+                        case 1:
+                            borroka3_3 = 1;
+                            break;
+                        case -1:
+                            return -1;
+                        case -2:
+                            return -2;
+                        }
+                    }
+                    GeziakHasieratu("pasaleku3_10");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_5");
+                    break;
+                case 11:
+                    irudiaKargatu(".\\img\\Akuarioak\\3\\Pasalekua11.png", 0);
+                    GeziakHasieratu("pasaleku3_11");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_3");
+                    break;
+                case 12:
+                    irudiaKargatu(".\\img\\Akuarioak\\3\\Buruzagia.png", 0);
+                    if (buruzagi3 == 0)
+                    {
+                        switch (borrokaHasi(1))
+                        {
+                        case 1:
+                            buruzagi3 = 1;
+                            haserreNibela = 3;
+                            return BuruzagiAnimazioa(2);
+                            break;
+                        case -1:
+                            return -1;
+                        case -2:
+                            return -2;
+                        }
+                    }
+                    break;
+                case 13:
+                    irudiaKargatu(".\\img\\Akuarioak\\3\\Pasalekua2.png", 0);
+                    PowerUpHasieratu();
+                    if (borroka3_1 == 0)
+                    {
+                        switch (borrokaHasi(0))
+                        {
+                        case 1:
+                            borroka3_1 = 1;
+                            break;
+                        case -1:
+                            return -1;
+                        case -2:
+                            return -2;
+                        }
+                    }
+                    GeziakHasieratu("pasaleku3_2");
+                    mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_4");
+                    break;
+                case 14:
+                    irudiaKargatu(".\\img\\Mapa.png", 0);
+                    irudiaKendu(ARRAIN_GIZON_ID);
+                    MaparenAukerak();
+                    break;
+            }
+            if (ezKargatuMusika == 0 && !kargatuMusika(".\\sound\\Musica fondo 1.wav")) printf("Ezin izan da musika kargatu. %s\n", SDL_GetError());
             break;
         default:
             printf("Akuario zenbakia gaizki dago");

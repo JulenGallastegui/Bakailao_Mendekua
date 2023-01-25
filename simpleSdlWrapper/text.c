@@ -82,7 +82,7 @@ void textuaIdatziPixkanaka(int x, int y, int denbora, char* str)
 
 			}
 			ebentu = ebentuaJasoGertatuBada();
-			if (ebentu == TECLA_RETURN || ebentu == TECLA_SPACE)
+			if (ebentu == TECLA_RETURN || ebentu == TECLA_SPACE || ebentu == SAGU_BOTOIA_EZKERRA)
 				break;
 			hurrengoLetra += denbora;
 			str2[i] = str[i];
@@ -99,7 +99,7 @@ void textuaIdatziPixkanaka(int x, int y, int denbora, char* str)
 			pantailaBerriztu();
 		}
 
-		if (ebentu == TECLA_RETURN || ebentu == TECLA_SPACE)
+		if (ebentu == TECLA_RETURN || ebentu == TECLA_SPACE || ebentu == SAGU_BOTOIA_EZKERRA)
 		{
 			textuaIdatzi(x, y, str);
 			pantailaBerriztu();

@@ -104,6 +104,7 @@ int borrokaHasi(int buruzagiaDa)
     switch (haserreNibela)
     {
         case 0:
+        case 3:
             irudiaKargatu(".\\img\\Pertsonaiak\\ArrainGizon\\Normal\\Arrain Gizon behera.png", 1);
             break;
         case 1:
@@ -115,7 +116,7 @@ int borrokaHasi(int buruzagiaDa)
     }
 
     EtsaiaSortu(buruzagiaDa);
-
+    
     irudiaKargatu(".\\img\\Borroka\\Borroka.png", 2);
 
     irudiaMugitu(1, 130, 175);
@@ -640,9 +641,9 @@ void EtsaiaSortu(int buruzagiaDa)
             {
                 irudiaKargatu(".\\img\\Pertsonaiak\\Buruzagi1.png", 3); //CAMBIAR EL DIBUJO PARA QUE TENGA EL TAMAÑO BIEN Y HACER QUE CADA ETSAIA TENGA SU X E Y PARA QUE AUN TENIENDO TAMAÑOS DISTINTOS LAS ANIMACIONES VAYAN BIEN.
                 irudiaMugitu(3, 380, 175);
-                etsaia.bizitzaMax = 80;
+                etsaia.bizitzaMax = 100;
                 etsaia.bizitza = etsaia.bizitzaMax;
-                etsaia.indarra = 20;
+                etsaia.indarra = 25;
                 etsaia.sendaketa = 10;
                 etsaia.probabilitateaKontra = 33;
                 etsaia.probabilitateaSendatu = 66;
@@ -657,7 +658,7 @@ void EtsaiaSortu(int buruzagiaDa)
                 irudiaMugitu(3, 380, 175);
                 etsaia.bizitzaMax = 110;
                 etsaia.bizitza = etsaia.bizitzaMax;
-                etsaia.indarra = 25;
+                etsaia.indarra = 20;
                 etsaia.sendaketa = 10;
                 etsaia.probabilitateaKontra = 33;
                 etsaia.probabilitateaSendatu = 66;
@@ -670,8 +671,8 @@ void EtsaiaSortu(int buruzagiaDa)
                 irudiaMugitu(3, 380, 175);
                 etsaia.bizitzaMax = 150;
                 etsaia.bizitza = etsaia.bizitzaMax;
-                etsaia.indarra = 20;
-                etsaia.sendaketa = 40;
+                etsaia.indarra = 25;
+                etsaia.sendaketa = 15;
                 etsaia.probabilitateaKontra = 33;
                 etsaia.probabilitateaSendatu = 43;
                 etsaia.kontSen = 0;

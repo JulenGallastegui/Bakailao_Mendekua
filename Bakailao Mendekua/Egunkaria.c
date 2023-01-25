@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "Egunkaria.h"
 #include "ebentoak.h"
 #include "text.h"
@@ -22,7 +23,7 @@ int EgunkariaJarri(void)
 
 	if (haserreNibela == 1)
 		orriMax = 12;
-	else if (haserreNibela == 2)
+	else if (haserreNibela == 2 || haserreNibela == 3)
 		orriMax = 14;
 
 	SDL_Color koloreZaharra = textColor;
@@ -249,9 +250,9 @@ void EgunkarikoTestuaIdatzi()
 		textuaIdatzi(150, 140, "2000 / 1 / 31");
 		textuaIdatzi(70, 180, "Lortu dut! Bakailaoman esperimentuekin");
 		textuaIdatzi(70, 200, "gelditu da, oso borroka zaila baten ");
-		textuaIdatzi(70, 220, "ondoren. Momentu batez uste nuen");
-		textuaIdatzi(70, 240, "birritan borrokatu behar genuela, baina");
-		textuaIdatzi(70, 260, "sortea izan dut eta ez da beharrezkoa");
+		textuaIdatzi(70, 220, "ondoren. Momentu batez birritan borrokatu");
+		textuaIdatzi(70, 240, "behar genuela uste nuen, baina");
+		textuaIdatzi(70, 260, "zortea izan dut eta ez da beharrezkoa");
 		textuaIdatzi(70, 280, "izan. ");
 		textuaIdatzi(70, 300, "Aquariland suntsitu dut, eta arrainekin");
 		textuaIdatzi(70, 320, "esperimentuak bukatu dira.");
@@ -269,15 +270,15 @@ void EgunkarikoTestuaIdatzi()
 		textuaIdatzi(375, 180, "Arrainei esan diet gertatutako guztia");
 		textuaIdatzi(375, 200, "eta denek ezkerrak eman didate.");
 		textuaIdatzi(375, 220, "Uste dut pixkat pasatu naizela arrainak");
-		textuaIdatzi(375, 240, "biltzen, segurazki eleberrietan agertuko");
+		textuaIdatzi(375, 240, "biltzen, ziur asko eleberrietan agertuko");
 		textuaIdatzi(375, 260, "da gaur zonaldeko itsas izaki gehienak");
-		textuaIdatzi(375, 280, "bildu direla ondartzan: tiburoiak, baleak");
-		textuaIdatzi(375, 300, "eta guzti, era gustiz pazifiko baten.");
-		textuaIdatzi(375, 320, "Lortutako gaitazun guztiei esker, erdi");
-		textuaIdatzi(375, 340, "arrain erdi gizakia bihurtu naiz, eta");
+		textuaIdatzi(375, 280, "ondartzan bildu direlako: marrazoak,");
+		textuaIdatzi(375, 300, "baleak eta guzti, era  pazifiko batean.");
+		textuaIdatzi(375, 320, "Lortutako gaitasun guztiei esker, erdi");
+		textuaIdatzi(375, 340, "arrain erdi gizaki bihurtu naiz, eta");
 		textuaIdatzi(375, 360, "gizakiak baino askoz denbora gehiago");
 		textuaIdatzi(375, 380, "egon ahal naiz ur azpian. Agian ur azpian");
-		textuaIdatzi(375, 400, "arnasten lortzen dut, nor daki.");
+		textuaIdatzi(375, 400, "arnasteko gai bihurtzen naiz, nor daki...");
 	default:
 		break;
 	}

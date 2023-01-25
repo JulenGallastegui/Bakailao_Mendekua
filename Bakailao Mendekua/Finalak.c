@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "Finalak.h"
 #include "graphics.h"
 #include "imagen.h"
@@ -12,6 +13,7 @@ void TestuFinalaJaso(int buruzagia, int zein, char* testua);
 
 int BuruzagiAnimazioa(int zein)
 {
+
 	kargatuMusika(".\\sound\\BuruzagiaIrabazita.wav");
 
 	if (Dialogoak(zein) == -1)
@@ -47,7 +49,7 @@ int Dialogoak(int buruzagia)
 	else if (buruzagia == 3)
 	{
 		irudiaKargatu(".\\img\\Pertsonaiak\\Buruzagi3.png", 2);
-		max = 0;
+		max = 21;
 	}
 
 	irudiaMugitu(1, 130, 175);
@@ -69,6 +71,7 @@ int Dialogoak(int buruzagia)
 			{
 				case TECLA_e:
 				case SAGU_BOTOIA_EZKERRA:
+				case TECLA_SPACE:
 					irten = 1;
 					break;
 				case GERTAERA_IRTEN:
@@ -230,6 +233,75 @@ void TestuFinalaJaso(int buruzagia, int zein, char *testua)
 			}
 			break;
 		case 3:
+			switch (zein)
+			{
+			case 0:
+				sprintf(testua, "%s", "Arraingizon: Bakailaoman, irabazi dizut.");
+				break;
+			case 1:
+				sprintf(testua, "%s", "Bakailaoman: blblblblblblblblblblblblblbl");
+				break;
+			case 2:
+				sprintf(testua, "%s", "A.G.: Arrain hitz egiten duzu? Uste nuen pertsona bat zinela...");
+				break;
+			case 3:
+				sprintf(testua, "%s", "B.M.: (itzulita) Ez, ni bakailao bat nintzen jaiotzan,");
+				break;
+			case 4:
+				sprintf(testua, "%s", "B.M.: baina izpi kosmiko batek jo ninduen eta eboluzionatu dut.");
+				break;
+			case 5:
+				sprintf(testua, "%s", "A.G.: Baina zergatik egiten dituzu esperimentuak bakailaoekin?");
+				break;
+			case 6:
+				sprintf(testua, "%s", "B.M.: Itsasokoek pentsatzen dute arrain perfektua lortu nahi dudala,");
+				break;
+			case 7:
+				sprintf(testua, "%s", "B.M.: baina ni bezalako arrain gehiago nahi ditut munduan,");
+				break;
+			case 8:
+				sprintf(testua, "%s", "B.M.: eta nire klonak sortzen saiatzen hari naiz.");
+				break;
+			case 9:
+				sprintf(testua, "%s", "A.G: Baina zergatik? Bakarrik sentitzen zara?");
+				break;
+			case 10:
+				sprintf(testua, "%s", "B.M.: Karkarkar! Ez, ez da horregatik.");
+				break;
+			case 11:
+				sprintf(testua, "%s", "B.M.: Nire klonak sortu nahi ditut mundu osoaren jabea izateko!");
+				break;
+			case 12:
+				sprintf(testua, "%s", "A.G: Badirudi ez dela posible izan behar zure ideiak aldatzea,");
+				break;
+			case 13:
+				sprintf(testua, "%s", "A.G: Ondorioz, bi aukera emango dizkizut: ");
+				break;
+			case 14:
+				sprintf(testua, "%s", "A.G: 1: Arrainontzi txiki batean igaro zure bizitza osoa.");
+				break;
+			case 15:
+				sprintf(testua, "%s", "A.G: 2: Itzuli itsasora, eta otoitz egin zure bizitzaren alde.");
+				break;
+			case 16:
+				sprintf(testua, "%s", "B.M.: Nola? Benetan uste duzu horrela tratatu ahal nazakezula?");
+				break;
+			case 17:
+				sprintf(testua, "%s", "A.G: Erantzun. Bat edo bi.");
+				break;
+			case 18:
+				sprintf(testua, "%s", "B.M.: Ez dakizu non sartzen zaude, mutiko.");
+				break;
+			case 19:
+				sprintf(testua, "%s", "A.G: Bat edo bi. Bazenekizun zure kupula oso ahula dela?");
+				break;
+			case 20:
+				sprintf(testua, "%s", "B.M.: Bale... Arrainontzi batean geldituko naiz.");
+				break;
+			case 21:
+				sprintf(testua, "%s", "A.G: Aukera ona hartu duzu...");
+				break;
+			}
 			break;
 	}
 }
