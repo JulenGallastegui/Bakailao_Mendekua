@@ -103,20 +103,20 @@ int borrokaHasi(int buruzagiaDa)
     //Arrain Gizonen irudia jarri
     switch (haserreNibela)
     {
-        case 0:
-        case 3:
-            irudiaKargatu(".\\img\\Pertsonaiak\\ArrainGizon\\Normal\\Arrain Gizon behera.png", 1);
-            break;
-        case 1:
-            irudiaKargatu(".\\img\\Pertsonaiak\\ArrainGizon\\Haserre\\Arrain Gizon behera.png", 1);
-            break;
-        case 2:
-            irudiaKargatu(".\\img\\Pertsonaiak\\ArrainGizon\\Oso haserre\\Arrain Gizon behera.png", 1);
-            break;
+    case 0:
+    case 3:
+        irudiaKargatu(".\\img\\Pertsonaiak\\ArrainGizon\\Normal\\Arrain Gizon behera.png", 1);
+        break;
+    case 1:
+        irudiaKargatu(".\\img\\Pertsonaiak\\ArrainGizon\\Haserre\\Arrain Gizon behera.png", 1);
+        break;
+    case 2:
+        irudiaKargatu(".\\img\\Pertsonaiak\\ArrainGizon\\Oso haserre\\Arrain Gizon behera.png", 1);
+        break;
     }
 
     EtsaiaSortu(buruzagiaDa);
-    
+
     irudiaKargatu(".\\img\\Borroka\\Borroka.png", 2);
 
     irudiaMugitu(1, 130, 175);
@@ -151,9 +151,9 @@ int borrokaHasi(int buruzagiaDa)
         }
         else
         {
-            if(arrainGizon.uraErabilita == 1 || botilaDu == 0)
+            if (arrainGizon.uraErabilita == 1 || botilaDu == 0)
                 textuaIdatzi(40, 670, "Ezin da erabili");
-            if(arrainGizon.barraErabilita == 1 || barraDu == 0)
+            if (arrainGizon.barraErabilita == 1 || barraDu == 0)
                 textuaIdatzi(180, 670, "Ezin da erabili");
             if (arrainGizon.protekzioaErabilita == 1 || ezkutuaDu == 0)
                 textuaIdatzi(320, 670, "Ezin da erabili");
@@ -237,7 +237,7 @@ void atk()
 
     arrainGizon.kontSen = 0;
     arrainGizon.kontKon = 0;
-    if(etsaia.bizitza > 0)
+    if (etsaia.bizitza > 0)
         MatoiarenAukerak(kolpeaJasoDu);
 
 }
@@ -286,7 +286,7 @@ void barra()
     {
         etsaia.bizitza = etsaia.bizitza - arrainGizon.indarra * 2;
         AnimatuArrainGizon(5);
-        if(etsaia.bizitza > 0)
+        if (etsaia.bizitza > 0)
             MatoiarenAukerak(kolpeaJasoDu);
         arrainGizon.barraErabilita = 1;
     }
@@ -331,7 +331,7 @@ void kon()
         if (MatoiarenAukerak(kolpeaJasoDu) == 1)
         {
             arrainGizon.bizitza = arrainGizon.bizitza + etsaia.indarra;
-            if(kontraerasoTotala == 0)
+            if (kontraerasoTotala == 0)
                 etsaia.bizitza = etsaia.bizitza - (etsaia.indarra / 2);
             else
                 etsaia.bizitza = etsaia.bizitza - etsaia.indarra;
@@ -351,14 +351,11 @@ void kon()
 int MatoiarenAukerak(int kolpeaJasoDu)
 {
     int zenbakia = random_number(0, 100);
-    printf("jasota: %d ", kolpeaJasoDu);
-    printf("%d: ", zenbakia);
     int kolpeaEmandu = 0;
 
 
     if (kolpeaJasoDu == 1 && etsaia.kontKon == 0 && etsaia.probabilitateaKontra >= zenbakia) //Kontraatakea
     {
-        printf("Contra\n");
         AnimatuEtsaia(3);
         etsaia.bizitza = etsaia.bizitza + arrainGizon.indarra;
         if (arrainGizon.protekzioaErabilita == 0 || arrainGizon.protekzioaErabilita >= 3)
@@ -375,7 +372,6 @@ int MatoiarenAukerak(int kolpeaJasoDu)
     }
     else if (etsaia.probabilitateaSendatu >= zenbakia && etsaia.kontSen == 0 && etsaia.bizitza < etsaia.bizitzaMax) //Curar
     {
-        printf("Curar\n");
         AnimatuEtsaia(2);
         etsaia.bizitza = etsaia.bizitza + etsaia.sendaketa;
         if (etsaia.bizitza > etsaia.bizitzaMax)
@@ -388,7 +384,6 @@ int MatoiarenAukerak(int kolpeaJasoDu)
     }
     else //Atakatu
     {
-        printf("Atacar\n");
         AnimatuEtsaia(1);
 
         if (arrainGizon.protekzioaErabilita == 0 || arrainGizon.protekzioaErabilita >= 3)
@@ -493,7 +488,7 @@ void AnimatuArrainGizon(int zein)
                     irudiaMugitu(1, 130 + 5 * kont, 175);
                 else
                     irudiaMugitu(1, 160 - 5 * (kont - 6), 175);
-                if(kont == 12)
+                if (kont == 12)
                     animazioaBukatu = 1;
                 break;
             case 2:
@@ -514,7 +509,7 @@ void AnimatuArrainGizon(int zein)
                 else if (kont <= 24)
                     irudiaMugitu(1, 160 - 5 * (kont - 18), 175);
 
-                if(kont == 24)
+                if (kont == 24)
                     animazioaBukatu = 1;
                 break;
             case 4:
@@ -528,7 +523,7 @@ void AnimatuArrainGizon(int zein)
                 else if (kont <= 24)
                     irudiaMugitu(1, 130, 145 + 5 * (kont - 18));
 
-                if(kont == 24)
+                if (kont == 24)
                     animazioaBukatu = 1;
                 break;
             case 5:
@@ -541,13 +536,13 @@ void AnimatuArrainGizon(int zein)
                 else if (kont <= 24)
                     irudiaMugitu(1, 160 - 5 * (kont - 18), 175);
 
-                if(kont == 24)
+                if (kont == 24)
                     animazioaBukatu = 1;
                 break;
             case 6:
-                if(kont <= 6)
+                if (kont <= 6)
                     irudiaMugitu(1, 130 - 5 * kont, 175);
-                else if(kont <= 12)
+                else if (kont <= 12)
                     irudiaMugitu(1, 100 + 5 * (kont - 6), 175);
 
                 if (kont == 12)
@@ -583,7 +578,7 @@ void AnimatuEtsaia(int zein)
                     irudiaMugitu(3, 380 - 5 * kont, 175);
                 else if (kont <= 12)
                     irudiaMugitu(3, 350 + 5 * (kont - 6), 175);
-                if(kont == 12)
+                if (kont == 12)
                     animazioaBukatu = 1;
                 break;
             case 2:
@@ -592,20 +587,20 @@ void AnimatuEtsaia(int zein)
                 else if (kont <= 12)
                     irudiaMugitu(3, 380, 145 + 5 * (kont - 6));
 
-                if(kont == 12)
+                if (kont == 12)
                     animazioaBukatu = 1;
                 break;
             case 3:
-                if(kont <= 6)
-                    irudiaMugitu(3, 380 + 5 * kont, 175 );
-                else if(kont <= 12)
+                if (kont <= 6)
+                    irudiaMugitu(3, 380 + 5 * kont, 175);
+                else if (kont <= 12)
                     irudiaMugitu(3, 410 - 5 * (kont - 6), 175);
-                else if(kont <= 18)
+                else if (kont <= 18)
                     irudiaMugitu(3, 380 - 5 * (kont - 12), 175);
-                else if(kont <= 24)
+                else if (kont <= 24)
                     irudiaMugitu(3, 350 + 5 * (kont - 18), 175);
 
-                if(kont == 24)
+                if (kont == 24)
                     animazioaBukatu = 1;
                 break;
             default:
@@ -623,89 +618,89 @@ void EtsaiaSortu(int buruzagiaDa)
 {
     switch (akuarioa)
     {
-        case 1:
-            if (buruzagiaDa == 0)
-            {
-                irudiaKargatu(".\\img\\Pertsonaiak\\Maton1.png", 3);
-                irudiaMugitu(3, 380, 175);
-                etsaia.bizitzaMax = 60;
-                etsaia.bizitza = etsaia.bizitzaMax;
-                etsaia.indarra = 10;
-                etsaia.sendaketa = 10;
-                etsaia.probabilitateaKontra = 40;
-                etsaia.probabilitateaSendatu = 0;
-                etsaia.kontSen = 0;
-                etsaia.kontKon = 0;
-            }
-            else
-            {
-                irudiaKargatu(".\\img\\Pertsonaiak\\Buruzagi1.png", 3); //CAMBIAR EL DIBUJO PARA QUE TENGA EL TAMAÑO BIEN Y HACER QUE CADA ETSAIA TENGA SU X E Y PARA QUE AUN TENIENDO TAMAÑOS DISTINTOS LAS ANIMACIONES VAYAN BIEN.
-                irudiaMugitu(3, 380, 175);
-                etsaia.bizitzaMax = 100;
-                etsaia.bizitza = etsaia.bizitzaMax;
-                etsaia.indarra = 25;
-                etsaia.sendaketa = 10;
-                etsaia.probabilitateaKontra = 33;
-                etsaia.probabilitateaSendatu = 66;
-                etsaia.kontSen = 0;
-                etsaia.kontKon = 0;
-            }
-            break;
-        case 2:
-            if (buruzagiaDa == 0)
-            {
-                irudiaKargatu(".\\img\\Pertsonaiak\\Maton2.png", 3);
-                irudiaMugitu(3, 380, 175);
-                etsaia.bizitzaMax = 110;
-                etsaia.bizitza = etsaia.bizitzaMax;
-                etsaia.indarra = 20;
-                etsaia.sendaketa = 10;
-                etsaia.probabilitateaKontra = 33;
-                etsaia.probabilitateaSendatu = 66;
-                etsaia.kontSen = 0;
-                etsaia.kontKon = 0;
-            }
-            else
-            {
-                irudiaKargatu(".\\img\\Pertsonaiak\\Buruzagi2.png", 3);
-                irudiaMugitu(3, 380, 175);
-                etsaia.bizitzaMax = 150;
-                etsaia.bizitza = etsaia.bizitzaMax;
-                etsaia.indarra = 25;
-                etsaia.sendaketa = 15;
-                etsaia.probabilitateaKontra = 33;
-                etsaia.probabilitateaSendatu = 43;
-                etsaia.kontSen = 0;
-                etsaia.kontKon = 0;
-            }
-            break;
-        case 3:
-            if (buruzagiaDa == 0)
-            {
-                irudiaKargatu(".\\img\\Pertsonaiak\\Maton3.png", 3);
-                irudiaMugitu(3, 380, 175);
-                etsaia.bizitzaMax = 120;
-                etsaia.bizitza = etsaia.bizitzaMax;
-                etsaia.indarra = 25;
-                etsaia.sendaketa = 10;
-                etsaia.probabilitateaKontra = 33;
-                etsaia.probabilitateaSendatu = 66;
-                etsaia.kontSen = 0;
-                etsaia.kontKon = 0;
-            }
-            else
-            {
-                irudiaKargatu(".\\img\\Pertsonaiak\\Buruzagi3.png", 3);
-                irudiaMugitu(3, 380, 175);
-                etsaia.bizitzaMax = 200;
-                etsaia.bizitza = etsaia.bizitzaMax;
-                etsaia.indarra = 30;
-                etsaia.sendaketa = 20;
-                etsaia.probabilitateaKontra = 33;
-                etsaia.probabilitateaSendatu = 70;
-                etsaia.kontSen = 0;
-                etsaia.kontKon = 0;
-            }
-            break;
+    case 1:
+        if (buruzagiaDa == 0)
+        {
+            irudiaKargatu(".\\img\\Pertsonaiak\\Maton1.png", 3);
+            irudiaMugitu(3, 380, 175);
+            etsaia.bizitzaMax = 140;
+            etsaia.bizitza = etsaia.bizitzaMax;
+            etsaia.indarra = 15;
+            etsaia.sendaketa = 10;
+            etsaia.probabilitateaKontra = 40;
+            etsaia.probabilitateaSendatu = 0;
+            etsaia.kontSen = 0;
+            etsaia.kontKon = 0;
+        }
+        else
+        {
+            irudiaKargatu(".\\img\\Pertsonaiak\\Buruzagi1.png", 3);
+            irudiaMugitu(3, 380, 175);
+            etsaia.bizitzaMax = 170;
+            etsaia.bizitza = etsaia.bizitzaMax;
+            etsaia.indarra = 25;
+            etsaia.sendaketa = 15;
+            etsaia.probabilitateaKontra = 33;
+            etsaia.probabilitateaSendatu = 66;
+            etsaia.kontSen = 0;
+            etsaia.kontKon = 0;
+        }
+        break;
+    case 2:
+        if (buruzagiaDa == 0)
+        {
+            irudiaKargatu(".\\img\\Pertsonaiak\\Maton2.png", 3);
+            irudiaMugitu(3, 380, 175);
+            etsaia.bizitzaMax = 170;
+            etsaia.bizitza = etsaia.bizitzaMax;
+            etsaia.indarra = 20;
+            etsaia.sendaketa = 10;
+            etsaia.probabilitateaKontra = 33;
+            etsaia.probabilitateaSendatu = 66;
+            etsaia.kontSen = 0;
+            etsaia.kontKon = 0;
+        }
+        else
+        {
+            irudiaKargatu(".\\img\\Pertsonaiak\\Buruzagi2.png", 3);
+            irudiaMugitu(3, 380, 175);
+            etsaia.bizitzaMax = 200;
+            etsaia.bizitza = etsaia.bizitzaMax;
+            etsaia.indarra = 25;
+            etsaia.sendaketa = 15;
+            etsaia.probabilitateaKontra = 33;
+            etsaia.probabilitateaSendatu = 43;
+            etsaia.kontSen = 0;
+            etsaia.kontKon = 0;
+        }
+        break;
+    case 3:
+        if (buruzagiaDa == 0)
+        {
+            irudiaKargatu(".\\img\\Pertsonaiak\\Maton3.png", 3);
+            irudiaMugitu(3, 380, 175);
+            etsaia.bizitzaMax = 200;
+            etsaia.bizitza = etsaia.bizitzaMax;
+            etsaia.indarra = 25;
+            etsaia.sendaketa = 10;
+            etsaia.probabilitateaKontra = 33;
+            etsaia.probabilitateaSendatu = 66;
+            etsaia.kontSen = 0;
+            etsaia.kontKon = 0;
+        }
+        else
+        {
+            irudiaKargatu(".\\img\\Pertsonaiak\\Buruzagi3.png", 3);
+            irudiaMugitu(3, 380, 175);
+            etsaia.bizitzaMax = 300;
+            etsaia.bizitza = etsaia.bizitzaMax;
+            etsaia.indarra = 30;
+            etsaia.sendaketa = 20;
+            etsaia.probabilitateaKontra = 33;
+            etsaia.probabilitateaSendatu = 70;
+            etsaia.kontSen = 0;
+            etsaia.kontKon = 0;
+        }
+        break;
     }
 }

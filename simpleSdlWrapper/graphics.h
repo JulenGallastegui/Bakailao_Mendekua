@@ -5,7 +5,7 @@
 #define SCREEN_WIDTH  700
 #define SCREEN_HEIGHT  700
 
-int sgHasieratu();
+int sgHasieratu(char* fileName);
 void sgItxi();//Sin opciones
 void arkatzKoloreaEzarri(int red, int green, int blue);
 void puntuaMarraztu(int x, int y);

@@ -532,6 +532,8 @@ int GeziakHasieratu(char* mapaIzena)
 		GeziakJaso(0, 1, geziak);
 	else if (mapaIzena == "Geltokirabidea")
 		GeziakJaso(0, 2, geziak);
+	else if (mapaIzena == "anden0")
+		GeziakJaso(0, 3, geziak);
 	else if (mapaIzena == "anden3")
 		GeziakJaso(3, -1, geziak);
 	else if (mapaIzena == "Akuarioaren sarrera3")

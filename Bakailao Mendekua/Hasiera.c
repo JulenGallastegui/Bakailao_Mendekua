@@ -128,10 +128,9 @@ int main(int argc, char * str[])
                 default:
                     break;
             }
-
         }
-
     }
+
     audioTerminate();
     sgItxi();
     return 0;
@@ -141,7 +140,7 @@ int main(int argc, char * str[])
 int hasieratu(void)
 {
 
-    if (sgHasieratu() == -1)
+    if (sgHasieratu(".\\img\\Bakailao Mendekua logo.png") == -1)
     {
         fprintf(stderr, "Unable to set 700x700 video: %s\n", SDL_GetError());
         return 0;
@@ -157,7 +156,6 @@ int hasieratu(void)
     }
 
     textuaGaitu(14);
-    
 
     return 0;
 
@@ -202,7 +200,7 @@ int MapaHasieratu()
                     break;
                 case 3:
                     irudiaKargatu(".\\img\\Anden\\Anden0.png", 0);
-                    GeziakHasieratu("anden3");
+                    GeziakHasieratu("anden0");
                     mugimenduHasieratuReturn = MugimenduaHasieratu(350, 620, "anden1");
                     break;
                 case 4:
@@ -308,7 +306,7 @@ int MapaHasieratu()
                 case 8:
                     irudiaKendu(ARRAIN_GIZON_ID);
                     if (MaparenAukerak() == -1)
-                        return -1;;
+                        return -1;
                     break;
                 default:
                     printf("Gela gaizki dago");
@@ -411,8 +409,9 @@ int MapaHasieratu()
                     mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_3");
                     break;
                 case 8:
-                    irudiaKargatu(".\\img\\Mapa.png", 0);
-                    MaparenAukerak();
+                    irudiaKendu(ARRAIN_GIZON_ID);
+                    if (MaparenAukerak() == -1)
+                        return -1;
                     break;
                 case 9:
                     irudiaKargatu(".\\img\\Akuarioak\\2\\Pasalekua7.png", 0);
@@ -549,7 +548,7 @@ int MapaHasieratu()
                         case 1:
                             buruzagi3 = 1;
                             haserreNibela = 3;
-                            return BuruzagiAnimazioa(2);
+                            return BuruzagiAnimazioa(3);
                             break;
                         case -1:
                             return -1;
@@ -578,9 +577,9 @@ int MapaHasieratu()
                     mugimenduHasieratuReturn = MugimenduaHasieratu(350, 450, "pasaleku1_4");
                     break;
                 case 14:
-                    irudiaKargatu(".\\img\\Mapa.png", 0);
                     irudiaKendu(ARRAIN_GIZON_ID);
-                    MaparenAukerak();
+                    if (MaparenAukerak() == -1)
+                        return -1;
                     break;
             }
             if (ezKargatuMusika == 0 && !kargatuMusika(".\\sound\\Musica fondo 1.wav")) printf("Ezin izan da musika kargatu. %s\n", SDL_GetError());

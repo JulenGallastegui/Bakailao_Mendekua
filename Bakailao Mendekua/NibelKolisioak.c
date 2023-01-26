@@ -740,8 +740,6 @@ int GeziakJaso(int akuario, int nibela, int(*geziak)[700])
 							geziak[i][j] = 2;
 						}
 					}
-
-
 					break;
 				case 3:
 					//ezkerreko gezia   i==X  j==Y

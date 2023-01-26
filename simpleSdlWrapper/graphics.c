@@ -16,7 +16,7 @@ int colorR, colorG, colorB;
 
 SDL_Renderer* getRenderer(void) { return gRenderer; }
 
-int sgHasieratu()
+int sgHasieratu(char *fileName)
 {
 	int ret = 0;
 
@@ -35,8 +35,10 @@ int sgHasieratu()
 		fprintf(stderr, "Ezin lehioa sortu: %s\n", SDL_GetError());
 		return -1;
 	}
-
 	gRenderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+
+	SDL_SetWindowIcon(window, IMG_Load(fileName));
+
 	TTF_Init();
 	atexit(TTF_Quit);
 	return ret;

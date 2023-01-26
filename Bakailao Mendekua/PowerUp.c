@@ -86,7 +86,7 @@ int PowerUpJaso()
 				{
 					irudiaKendu(5);
 					powerUp2_2 = 1;
-					sendaketaExtra += 20;
+					bizitzaExtra+= 20;
 					return 1;
 				}
 				break;

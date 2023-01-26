@@ -1,11 +1,11 @@
 #include "ebentoak.h"
 
-POSIZIOA saguPos;
+POSIZIOA saguPos = {0,0};
 SDL_Event event;
 
 POSIZIOA saguarenPosizioa() { return saguPos;}
 
-int ctrl, alt, shift;
+int ctrl = 0, alt = 0, shift = 0;
 extern int idazten;
 
 int ebentuaJasoGertatuBada(void){

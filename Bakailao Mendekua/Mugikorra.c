@@ -25,7 +25,7 @@ extern int ctrl;
 
 int menua = 0;
 
-POSIZIOA saguPos = { 0, 0 };
+POSIZIOA saguarenPos = { 0, 0 };
 
 int MugikorraAtera(void)
 {
@@ -58,7 +58,7 @@ int MugikorraAtera(void)
 		if(menua == 0) 
 			bolumenaAldatu(ebentu);
 
-		saguPos = saguarenPosizioa();
+		saguarenPos = saguarenPosizioa();
 
 		switch (ebentu)
 		{
@@ -140,18 +140,18 @@ int MugikorraAtera(void)
 int SaguPosAztertu(int scrollMax)
 {
 	//Barran sakatu du
-	if (menua == 0 && saguPos.x > 580 && saguPos.x < 600 && saguPos.y <= (float)290 / scrollMax * posNolaJolastu + 310 && saguPos.y >= (float)290 / scrollMax * posNolaJolastu + 280)
+	if (menua == 0 && saguarenPos.x > 580 && saguarenPos.x < 600 && saguarenPos.y <= (float)290 / scrollMax * posNolaJolastu + 310 && saguarenPos.y >= (float)290 / scrollMax * posNolaJolastu + 280)
 		arratoia = 1;
 	//Bueltatzeko gezian sakatu du
-	else if (saguPos.x >= 334 && saguPos.x <= 365 && saguPos.y >= 624 && saguPos.x <= 660)
+	else if (saguarenPos.x >= 334 && saguarenPos.x <= 365 && saguarenPos.y >= 624 && saguarenPos.x <= 660)
 		return 1;
 	//Etxean sakatu du (hasierako menura bueltatu)
-	else if (saguPos.x >= 429 && saguPos.x <= 465 && saguPos.y >= 624 && saguPos.x <= 660)
+	else if (saguarenPos.x >= 429 && saguarenPos.x <= 465 && saguarenPos.y >= 624 && saguarenPos.x <= 660)
 	{
 		return 2;
 	}
 	//Marretan sakatu du
-	else if (saguPos.x >= 529 && saguPos.x <= 570 && saguPos.y >= 624 && saguPos.x <= 660)
+	else if (saguarenPos.x >= 529 && saguarenPos.x <= 570 && saguarenPos.y >= 624 && saguarenPos.x <= 660)
 	{
 		menua = menua == 1 ? 0 : 1;
 		if (menua == 1)
@@ -166,30 +166,30 @@ int SaguPosAztertu(int scrollMax)
 		}
 	}
 	//Bolumenaren ikurrak
-	else if (menua == 1 && saguPos.x >= 506 && saguPos.x <= 527 && saguPos.y >= 330 && saguPos.y <= 342) //Musika jaitsi
+	else if (menua == 1 && saguarenPos.x >= 506 && saguarenPos.x <= 527 && saguarenPos.y >= 330 && saguarenPos.y <= 342) //Musika jaitsi
 	{
 		if(MusikaBolumenaJaso() - 1 != -1)
 			musikarenBolumena(MusikaBolumenaJaso() - 1);
 	}
-	else if (menua == 1 && saguPos.x >= 531 && saguPos.x <= 550 && saguPos.y >= 330 && saguPos.y <= 342) //Musika kendua
+	else if (menua == 1 && saguarenPos.x >= 531 && saguarenPos.x <= 550 && saguarenPos.y >= 330 && saguarenPos.y <= 342) //Musika kendua
 	{
 		musikarenBolumena(0);
 	}
-	else if (menua == 1 && saguPos.x >= 554 && saguPos.x <= 575 && saguPos.y >= 330 && saguPos.y <= 342) //Musika igo
+	else if (menua == 1 && saguarenPos.x >= 554 && saguarenPos.x <= 575 && saguarenPos.y >= 330 && saguarenPos.y <= 342) //Musika igo
 	{
 		if (MusikaBolumenaJaso() + 1 != 9)
 			musikarenBolumena(MusikaBolumenaJaso() + 1);
 	}
-	else if (menua == 1 && saguPos.x >= 506 && saguPos.x <= 527 && saguPos.y >= 400 && saguPos.y <= 412) //Efektuak jaitsi
+	else if (menua == 1 && saguarenPos.x >= 506 && saguarenPos.x <= 527 && saguarenPos.y >= 400 && saguarenPos.y <= 412) //Efektuak jaitsi
 	{
 		if (SoinuenBolumenaJaso() - 1 != -1)
 			soinuenBolumena(SoinuenBolumenaJaso() - 1);
 	}
-	else if (menua == 1 && saguPos.x >= 531 && saguPos.x <= 550 && saguPos.y >= 400 && saguPos.y <= 412) //Efektuak kendua
+	else if (menua == 1 && saguarenPos.x >= 531 && saguarenPos.x <= 550 && saguarenPos.y >= 400 && saguarenPos.y <= 412) //Efektuak kendua
 	{
 		soinuenBolumena(0);
 	}
-	else if (menua == 1 && saguPos.x >= 554 && saguPos.x <= 575 && saguPos.y >= 400 && saguPos.y <= 412) //Efektuak igo
+	else if (menua == 1 && saguarenPos.x >= 554 && saguarenPos.x <= 575 && saguarenPos.y >= 400 && saguarenPos.y <= 412) //Efektuak igo
 	{
 		if (SoinuenBolumenaJaso() + 1 != 9)
 			soinuenBolumena(SoinuenBolumenaJaso() + 1);
@@ -209,7 +209,7 @@ void NolaJolastuTestuaJarri(void)
 
 int ArratoiaErabiliz(int scrollMax)
 {
-	int pos = saguPos.y;
+	int pos = saguarenPos.y;
 
 	if (pos < 280)
 		pos = 280;
@@ -227,7 +227,7 @@ void BarraMugitu(int scrollMax)
 	}
 	else //Barra erabiliz mugitu da
 	{
-		int pos = saguPos.y;
+		int pos = saguarenPos.y;
 
 		if (pos > 585)
 			pos = 585;
